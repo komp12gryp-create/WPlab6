@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Картируване зображення</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #FFFFCC;
+            color: #330066;
+            margin: 0;
+            line-height: 1.55
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 26px
+        }
+
+        h1,
+        h2 {
+            color: #4b246c
+        }
+.card {
+            background: #fffdf2;
+            border: 1px solid #c8b9d8;
+            border-radius: 12px;
+            padding: 18px;
+            margin: 18px 0;
+            box-shadow: 0 2px 8px #0001
+        }
+img {
+            max-width: 100%
+        }
+.mapbox {
+            overflow: auto;
+            text-align: center
+        }
+
+        .mapbox img {
+            width: 900px;
+            height: 420px;
+            border: 2px solid #330066;
+            border-radius: 12px
+        }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Картируване зображення з геометричних фігур</h1>
+        <p>Карта містить три активні області різної форми: багатокутник, коло та прямокутник. Кожна область відкриває
+            відповідний локальний HTML-документ.</p>
+        <div class="mapbox">
+            <img
+                src="fig.png"
+                width="900"
+                height="420"
+                usemap="#mainMap"
+                alt="Карта з трьома геометричними фігурами"
+            >
+        </div>
+        <map name="mainMap">
+            <area
+                shape="poly"
+                coords="55,320,250,55,425,310"
+                href="HolubLab01-9.html"
+                alt="Про мене"
+                title="Перейти на домашню сторінку — Про мене"
+            >
+            <area
+                shape="circle"
+                coords="690,130,105"
+                href="HolubLab05-3.html"
+                alt="Мої гіперпосилання"
+                title="Перейти на сторінку Мої гіперпосилання"
+            >
+            <area
+                shape="rect"
+                coords="430,260,840,370"
+                href="HolubLab06-3.html"
+                alt="Моя Батьківщина"
+                title="Перейти на сторінку Моя Батьківщина"
+            >
+        </map>
+        <div class="card">
+            <h2>Що містить карта</h2>
+            <p><b>Багатокутник «Про мене»</b> веде до домашньої сторінки. <b>Коло «Посилання»</b> відкриває сторінку з
+                гіперпосиланнями. <b>Прямокутник «Моя Батьківщина»</b> відкриває попереднє завдання.</p>
+        </div>
+</body>
+
+</html>

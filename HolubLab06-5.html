@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Сенсорне зображення</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #FFFFCC;
+            color: #330066;
+            margin: 0;
+            line-height: 1.55
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 26px
+        }
+
+        h1,
+        h2 {
+            color: #4b246c
+        }
+.card {
+            background: #fffdf2;
+            border: 1px solid #c8b9d8;
+            border-radius: 12px;
+            padding: 18px;
+            margin: 18px 0;
+            box-shadow: 0 2px 8px #0001
+        }
+img {
+            max-width: 100%
+        }
+.mapwrap {
+            text-align: center;
+            overflow: auto
+        }
+
+        .mapwrap img {
+            width: 900px;
+            height: 520px;
+            border: 2px solid #330066;
+            border-radius: 12px
+        }
+
+        .zones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 14px
+        }
+
+        .zones .card {
+            margin: 0
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Сенсорне зображення — навігаційна карта</h1>
+        <p>Наведіть курсор на кольорові області карти. Для кожної області задано власний спливаючий текст. Клацання
+            переносить до короткого опису відповідної зони нижче.</p>
+        <div class="mapwrap">
+            <img
+                src="map.png"
+                width="900"
+                height="520"
+                usemap="#sensorMap"
+                alt="Навчальна сенсорна карта"
+            >
+        </div>
+        <map name="sensorMap">
+            <area
+                shape="poly"
+                coords="60,145,95,95,180,65,265,95,300,150,255,205,170,225,85,200"
+                href="#park"
+                title="Парк — тиха зелена зона для прогулянок"
+                alt="Парк"
+            >
+            <area
+                shape="poly"
+                coords="565,105,600,60,690,35,775,65,815,115,780,165,695,185,610,165"
+                href="#green"
+                title="Зелена зона — місце для відпочинку серед дерев"
+                alt="Зелена зона"
+            >
+            <area
+                shape="poly"
+                coords="350,120,420,70,495,125,475,205,370,210"
+                href="#center"
+                title="Історичний центр — архітектура та головні міські маршрути"
+                alt="Історичний центр"
+            >
+            <area
+                shape="circle"
+                coords="640,300,54"
+                href="#square"
+                title="Площа — відкрита міська зона та місце зустрічей"
+                alt="Площа"
+            >
+            <area
+                shape="poly"
+                coords="120,300,210,275,265,340,215,405,115,382,70,335"
+                href="#museum"
+                title="Музей — знайомство з історією та культурою міста"
+                alt="Музей"
+            >
+            <area
+                shape="poly"
+                coords="530,370,610,335,700,370,735,450,620,480,540,445"
+                href="#river"
+                title="Набережна — прогулянкова зона біля води"
+                alt="Набережна"
+            >
+        </map>
+        <div class="zones">
+            <div
+                class="card"
+                id="park"
+            >
+                <h2>Парк</h2>
+                <p>Зелена зона для прогулянок і спокійного відпочинку.</p>
+            </div>
+            <div
+                class="card"
+                id="green"
+            >
+                <h2>Зелена зона</h2>
+                <p>Ділянка з деревами та місцями для відпочинку.</p>
+            </div>
+            <div
+                class="card"
+                id="center"
+            >
+                <h2>Історичний центр</h2>
+                <p>Місце, де зосереджені пам’ятки та важливі міські маршрути.</p>
+            </div>
+            <div
+                class="card"
+                id="square"
+            >
+                <h2>Площа</h2>
+                <p>Відкрита громадська зона, зручна для зустрічей і подій.</p>
+            </div>
+            <div
+                class="card"
+                id="museum"
+            >
+                <h2>Музей</h2>
+                <p>Простір для знайомства з історією, культурою та мистецтвом.</p>
+            </div>
+            <div
+                class="card"
+                id="river"
+            >
+                <h2>Набережна</h2>
+                <p>Умовна прогулянкова зона біля води на навчальній карті.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

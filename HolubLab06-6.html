@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Мої друзі</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #FFFFCC;
+            color: #330066;
+            margin: 0;
+            line-height: 1.55
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 26px
+        }
+
+        h1,
+        h2 {
+            color: #4b246c
+        }
+.card {
+            background: #fffdf2;
+            border: 1px solid #c8b9d8;
+            border-radius: 12px;
+            padding: 18px;
+            margin: 18px 0;
+            box-shadow: 0 2px 8px #0001
+        }
+img {
+            max-width: 100%
+        }
+.mapwrap {
+            text-align: center;
+            overflow: auto
+        }
+    
+        .friends {
+            display: block
+        }
+
+        .friend {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            margin: 18px 0
+        }
+
+        .friend img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid #c8b9d8
+        }
+
+        .friend h2 {
+            margin-top: 0
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Мої друзі та одногрупники</h1>
+        <p>Це навчальна WEB-сторінка з інформацією про друзів. Навігаційна карта зверху має спливаючі заголовки:
+            наведіть курсор на картку або натисніть на неї, щоб перейти до опису.</p>
+        <div class="mapwrap">
+                <img
+                    class="map-overlay"
+                    src="FR.png"
+                    width="900"
+                    height="225"
+                    usemap="#friendsMap"
+                    alt="Навігаційна карта друзів"
+                >   
+        </div>
+        <map name="friendsMap">
+            <area
+                shape="rect"
+                coords="0,0,225,225"
+                href="#f1"
+                title="Олексій — програмування та командні проєкти"
+                alt="Олексій"
+            >
+            <area
+                shape="rect"
+                coords="225,0,450,225"
+                href="#f2"
+                title="Марія — дизайн та вебтехнології"
+                alt="Марія"
+            >
+            <area
+                shape="rect"
+                coords="450,0,675,225"
+                href="#f3"
+                title="Дмитро — комп’ютерні мережі"
+                alt="Дмитро"
+            >
+            <area
+                shape="rect"
+                coords="675,0,900,225"
+                href="#f4"
+                title="Ірина — аналіз даних"
+                alt="Ірина"
+            >
+        </map>
+        <div class="friends">
+            <div
+                class="friend card"
+                id="f1"
+            >
+                <img
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    alt="Навчальне фото: Олексій"
+                    title="Олексій: Програмування та командні проєкти"
+                >
+                <div>
+                    <h2>Олексій</h2>
+                    <p><b>Інтереси:</b> Програмування та командні проєкти</p>
+                    <p>Олексій цікавиться програмуванням, любить працювати над практичними завданнями та обговорювати
+                        нові технології.</p>
+                </div>
+            </div>
+            <div
+                class="friend card"
+                id="f2"
+            >
+                <img
+                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                    alt="Навчальне фото: Марія"
+                    title="Марія: Дизайн та вебтехнології"
+                >
+                <div>
+                    <h2>Марія</h2>
+                    <p><b>Інтереси:</b> Дизайн та вебтехнології</p>
+                    <p>Марія цікавиться вебдизайном і створенням зручних інтерфейсів. У командній роботі уважна до
+                        оформлення та деталей.</p>
+                </div>
+            </div>
+            <div
+                class="friend card"
+                id="f3"
+            >
+                <img
+                    src="https://randomuser.me/api/portraits/men/46.jpg"
+                    alt="Навчальне фото: Дмитро"
+                    title="Дмитро: Комп’ютерні мережі"
+                >
+                <div>
+                    <h2>Дмитро</h2>
+                    <p><b>Інтереси:</b> Комп’ютерні мережі</p>
+                    <p>Дмитро цікавиться комп’ютерними мережами, обладнанням і налаштуванням програмного забезпечення.
+                    </p>
+                </div>
+            </div>
+            <div
+                class="friend card"
+                id="f4"
+            >
+                <img
+                    src="https://randomuser.me/api/portraits/women/65.jpg"
+                    alt="Навчальне фото: Ірина"
+                    title="Ірина: Аналіз даних"
+                >
+                <div>
+                    <h2>Ірина</h2>
+                    <p><b>Інтереси:</b> Аналіз даних</p>
+                    <p>Ірина вивчає роботу з даними, таблицями та програмами для аналізу інформації. Любить
+                        структуровані завдання.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
